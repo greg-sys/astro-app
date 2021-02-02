@@ -4,11 +4,11 @@
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 33.33%;
+  width: 30%;
   color: black;
   font-family: "Cormorant Garamond", serif;
   font-size: 30px;
-  padding: 30px;
+  padding: 10px;
 }
 
 .App {
