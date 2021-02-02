@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+}
+
 .App {
   text-align: center;
 }

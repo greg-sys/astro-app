@@ -51,8 +51,12 @@ class App extends Component {
     return (
       <React.Fragment>
         <main className="container">
-          <AstroYantra moleculeScale="10" />
-          <AstroYantra moleculeScale="10" />
+          <div class="column">
+            <AstroYantra moleculeScale="10" />
+          </div>
+          <div class="column">
+            <AstroYantra moleculeScale="10" />
+          </div>
         </main>
       </React.Fragment>
     );
