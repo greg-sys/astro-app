@@ -55,6 +55,10 @@ class App extends Component {
             <AstroYantra moleculeScale="10" />
           </div>
           <div class="column">
+              <h1>Welcome to my Home Page!</h1>
+              Here is my astrological yantra.
+          </div>
+          <div class="column">
             <AstroYantra moleculeScale="10" />
           </div>
         </main>
