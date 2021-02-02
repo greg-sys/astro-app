@@ -50,14 +50,8 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <NavBar totalCounters = {this.state.counters.filter(c => c.count >0).length} />
         <main className="container">
-          <Counters 
-            counters={this.state.counters}
-            onReset={this.handleReset}
-            onIncrement={this.handleIncrement}
-            onDelete={this.handleDelete}
-          />
+          <AstroYantra moleculeScale="10" />
           <AstroYantra moleculeScale="10" />
         </main>
       </React.Fragment>
