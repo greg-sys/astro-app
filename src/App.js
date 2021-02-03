@@ -58,7 +58,7 @@ class App extends Component {
               <h1>Welcome to my Home Page!</h1>
               Here is my astrological yantra.
           </div>
-          <div class="column">
+          <div class="rightcolumn">
             <AstroYantra symbols="Western" />
           </div>
         </main>
