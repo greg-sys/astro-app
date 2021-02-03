@@ -51,7 +51,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <main className="container">
-          <div class="column">
+          <div class="leftcolumn">
             <AstroYantra moleculeScale="10" />
           </div>
           <div class="column">

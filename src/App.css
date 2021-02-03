@@ -2,13 +2,22 @@
 @import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
 
 /* Create three equal columns that floats next to each other */
+.leftcolumn {
+  float: left;
+  width: 30%;
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  padding-right: 12px;
+}
+
 .column {
   float: left;
   width: 30%;
   color: black;
   font-family: "Cormorant Garamond", serif;
   font-size: 30px;
-  padding: 10px;
+  padding-right: 2px;
 }
 
 .App {
