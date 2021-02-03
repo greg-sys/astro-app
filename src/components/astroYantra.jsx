@@ -182,6 +182,20 @@ export default class AstroYantra extends Component {
     }
 
     componentDidMount() {
+        if(this.props.symbols === "Western") {
+            this.plantarySymbols = {
+                sun: "☉",
+                moon: "☾",
+                mars: "♂",
+                mercury: "☿",
+                jupiter: "♃",
+                venus: "♀",
+                saturn: "♄",
+                rahu: "☊",
+                ketu: " ☋",
+                uranus: "♅"
+            };
+        }
         // http://localhost:5000/api/siderealPlanets
         // http://firstnodeaws-env.eba-ywqhm7pn.us-east-2.elasticbeanstalk.com/api/astro/siderealPlanets
         fetch('http://firstnodeaws-env.eba-ywqhm7pn.us-east-2.elasticbeanstalk.com/api/astro/siderealPlanets', {

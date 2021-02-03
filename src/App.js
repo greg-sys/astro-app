@@ -52,14 +52,14 @@ class App extends Component {
       <React.Fragment>
         <main className="container">
           <div class="leftcolumn">
-            <AstroYantra moleculeScale="10" />
+            <AstroYantra symbols="Thai" />
           </div>
           <div class="column">
               <h1>Welcome to my Home Page!</h1>
               Here is my astrological yantra.
           </div>
           <div class="column">
-            <AstroYantra moleculeScale="10" />
+            <AstroYantra symbols="Western" />
           </div>
         </main>
       </React.Fragment>
