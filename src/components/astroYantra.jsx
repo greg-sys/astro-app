@@ -237,13 +237,19 @@ export default class AstroYantra extends Component {
             console.log(itemsFromApi);
             console.log(this.planetaryPositions);
             this.planetaryPositions = itemsFromApi;
+            let fontSize = ""
+            if (this.props.symbols === "Western") {
+                fontSize = "18";
+            } 
+            else fontSize = "22";
+
             for (const planet in this.planetaryPositions) {
                 // console.log(`${planet}: ${this.planetaryPositions[planet]}`);
                 // console.log(((this.signCoordinates[this.planetaryPositions[planet]])[signTotals[this.planetaryPositions[planet]]])["x"]);
                 items.push(<text 
                     x={ ((this.signCoordinates[this.planetaryPositions[planet]])[signTotals[this.planetaryPositions[planet]]])["x"] }
                     y={ ((this.signCoordinates[this.planetaryPositions[planet]])[signTotals[this.planetaryPositions[planet]]])["y"] }
-                    font-family="Verdana" font-size="22">{this.plantarySymbols[planet]}
+                    font-family="Verdana" font-size={this.fontSize}>{this.plantarySymbols[planet]}
                     </text>);
                 signTotals[this.planetaryPositions[planet]] += 1; /* increment number of planets for sign planet is located in */
             }
