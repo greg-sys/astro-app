@@ -7,6 +7,7 @@
   width: 30%;
   color: black;
   padding-right: 45px;
+  font-size: 22px;
 }
 
 .column {
@@ -18,9 +19,10 @@
 }
 
 .rightcolumn {
-  float: right;
+  float: left;
   width: 30%;
   color: black;
+  font-size: 18px;
 }
 
 .App {
