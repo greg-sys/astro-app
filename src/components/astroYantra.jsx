@@ -187,7 +187,7 @@ export default class AstroYantra extends Component {
             this.plantarySymbols = {
                 sun: "☉",
                 moon: "☾",
-                mars: "♂",
+                mars: " &#9794;",
                 mercury: "☿",
                 jupiter: "♃",
                 venus: "♀",
