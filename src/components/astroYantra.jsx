@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../App.css';
 
 export default class AstroYantra extends Component {
     planetaryPositions = {
@@ -238,10 +239,15 @@ export default class AstroYantra extends Component {
             console.log(this.planetaryPositions);
             this.planetaryPositions = itemsFromApi;
             let fontSize = ""
+            let family = ""
             if (this.props.symbols === "Western") {
                 fontSize = "18";
+                family = "Cardo";
             } 
-            else fontSize = "22";
+            else {
+                fontSize = "22";
+                family = "Verdana";
+            }
 
             for (const planet in this.planetaryPositions) {
                 // console.log(`${planet}: ${this.planetaryPositions[planet]}`);
@@ -249,7 +255,7 @@ export default class AstroYantra extends Component {
                 items.push(<text 
                     x={ ((this.signCoordinates[this.planetaryPositions[planet]])[signTotals[this.planetaryPositions[planet]]])["x"] }
                     y={ ((this.signCoordinates[this.planetaryPositions[planet]])[signTotals[this.planetaryPositions[planet]]])["y"] }
-                    font-family="Verdana" font-size={this.fontSize}>{this.plantarySymbols[planet]}
+                    font-family={this.family} font-size={this.fontSize}>{this.plantarySymbols[planet]}
                     </text>);
                 signTotals[this.planetaryPositions[planet]] += 1; /* increment number of planets for sign planet is located in */
             }

@@ -55,7 +55,7 @@ class App extends Component {
             <AstroYantra symbols="Thai" />
           </div>
           <div class="column">
-              <h1>Where are the planets now?</h1>
+              <h1>Where are the planets?</h1>
               <div font-size="18px">
                 Here is my astrological yantra in two forms. These diagrams show the positions of the planets in the sidereal zodiac signs. Aries is at the top, and the signs proceed counterclockwise through Taurus, Gemini, and so on.<br /><br />
 
