@@ -250,12 +250,13 @@ export default class AstroYantra extends Component {
             }
 
             for (const planet in this.planetaryPositions) {
+                // font-family={this.family}
                 // console.log(`${planet}: ${this.planetaryPositions[planet]}`);
                 // console.log(((this.signCoordinates[this.planetaryPositions[planet]])[signTotals[this.planetaryPositions[planet]]])["x"]);
                 items.push(<text 
                     x={ ((this.signCoordinates[this.planetaryPositions[planet]])[signTotals[this.planetaryPositions[planet]]])["x"] }
                     y={ ((this.signCoordinates[this.planetaryPositions[planet]])[signTotals[this.planetaryPositions[planet]]])["y"] }
-                    font-family={this.family} font-size={this.fontSize}>{this.plantarySymbols[planet]}
+                    font-size={this.fontSize}>{this.plantarySymbols[planet]}
                     </text>);
                 signTotals[this.planetaryPositions[planet]] += 1; /* increment number of planets for sign planet is located in */
             }
