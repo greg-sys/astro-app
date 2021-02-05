@@ -187,7 +187,7 @@ export default class AstroYantra extends Component {
             this.plantarySymbols = {
                 sun: "☉",
                 moon: "☾",
-                mars: "♂",
+                mars: "♂︎",
                 mercury: "☿",
                 jupiter: "♃",
                 venus: "♀",
@@ -239,14 +239,11 @@ export default class AstroYantra extends Component {
             console.log(this.planetaryPositions);
             this.planetaryPositions = itemsFromApi;
             let fontSize = ""
-            let family = ""
             if (this.props.symbols === "Western") {
                 fontSize = "18";
-                family = "Cardo";
             } 
             else {
                 fontSize = "22";
-                family = "Verdana";
             }
 
             for (const planet in this.planetaryPositions) {

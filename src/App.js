@@ -66,7 +66,6 @@ class App extends Component {
           </div>
           <div class="rightcolumn">
             <AstroYantra symbols="Western" />
-            ☉ ☾ ♂ ☿ ♃ ♀ ๑ ๒ ๓ ๔ ๕ ๖ Testing Cardo text here.
           </div>
         </main>
       </React.Fragment>
