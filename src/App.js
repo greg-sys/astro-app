@@ -1,19 +1,8 @@
 import React, { Component } from 'react';
-import NavBar from './components/navbar';
 import './App.css';
-import Counters from './components/counters';
 import AstroYantra from './components/astroYantra';
 
 class App extends Component {
-
-  state = {
-    counters: [
-        { id: 1, count: 4 },
-        { id: 2, count: 0 },
-        { id: 3, count: 0 },
-        { id: 4, count: 0 }
-    ]
-  };
 
   constructor(props) {
     super(props);
@@ -25,28 +14,6 @@ class App extends Component {
     console.log('app - mounted');
   }
 
-  handleIncrement = counter => {
-    const counters = [...this.state.counters];
-    const index = counters.indexOf(counter);
-    counters[index] = {...counter};
-    counters[index].count++;
-    this.setState({ counters });
-  }
-
-  handleDelete = (counterId) => {
-    console.log('Event handler called', counterId);
-    const counters = this.state.counters.filter(c => c.id !== counterId);
-    this.setState({ counters })
-  };
-
-  handleReset = () => {
-    const counters = this.state.counters.map(c => {
-        c.count = 0;
-        return c;
-    });
-    this.setState({ counters });
-  };
-
   render() {
     return (
       <React.Fragment>
@@ -57,7 +24,7 @@ class App extends Component {
           <div class="column">
               <h1>Where are the planets?</h1>
               <div font-size="18px">
-                Here is my astrological yantra in two forms. These diagrams show the positions of the planets in the sidereal zodiac signs. Aries is at the top, and the signs proceed counterclockwise through Taurus, Gemini, and so on.<br /><br />
+                Here are two React components rendered with Thai numerals on the left and Western planetary symbols on the right. These diagrams show the positions of the planets in the sidereal zodiac signs. Aries is at the top, and the signs proceed counterclockwise through Taurus, Gemini, and so on.<br /><br />
 
                 The design is based on this <a href ="https://commons.wikimedia.org/wiki/File:Thai_wheel_with_detriment.svg">astrological wheel</a> from Wikimedia Commons.<br /><br />
 
