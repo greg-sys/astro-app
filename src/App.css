@@ -32,7 +32,7 @@
 
 .topblock {
   float: left;
-  width: 100%;
+  width: 80%;
   color: black;
   font-family: "Monaco", "Cardo", sans-serif;
   font-size: 20px;
@@ -44,11 +44,12 @@
   color: black;
   font-family: "Cormorant Garamond", serif;
   font-size: 18px;
+  margin-left: 12px;
 }
 
 .bottomblock {
   float: left;
-  width: 100%;
+  width: 80%;
   color: black;
   font-family: "Monaco", "Cardo", sans-serif;
   font-size: 15px;
