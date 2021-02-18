@@ -200,7 +200,7 @@ export default class AstroYantra extends Component {
         // http://localhost:5000/api/siderealPlanets
         // http://firstnodeaws-env.eba-ywqhm7pn.us-east-2.elasticbeanstalk.com/api/astro/siderealPlanets
         // it should be possible to make the API call below using a relative path
-        fetch('/api/astro/siderealPlanets', {
+        fetch('http://localhost:8080/api/astro/siderealPlanets', {
             method: 'GET', // *GET, POST, PUT, DELETE, etc.
             mode: 'cors', // no-cors, *cors, same-origin
             // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
