@@ -221,7 +221,9 @@ export default class AstroYantra extends Component {
                 throw err
             }
             if(res.headers.get("content-type") !== "application/json; charset=utf-8") {
-                throw new TypeError(`Expected JSON, got ${res.headers.get("content-type")}: ${res.text()} `);
+                throw new TypeError(`Expected JSON, got ${res.headers.get("content-type")}: ${res.text().then(function(body) {
+                    document.body.innerHTML = body
+                  })} `);
             }
             return res.json();
         })
