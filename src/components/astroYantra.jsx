@@ -236,7 +236,7 @@ export default class AstroYantra extends Component {
     render() {
         const items = [];
         const signTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; /* total number of planets in each sign */
-        var { isLoaded, itemsFromApi } = this.state;
+        var { isLoaded, itemsFromApi, isError } = this.state;
         if(!isLoaded) {
             return <div>Loading...</div>
         } else if(isError){
