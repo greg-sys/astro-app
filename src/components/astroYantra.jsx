@@ -229,7 +229,7 @@ export default class AstroYantra extends Component {
                 isLoaded: true,
                 itemsFromApi: {},
                 isError: true,
-                errorMessage = error,
+                errorMessage: error,
             });
             console.error('Error:', error);
           });
