@@ -179,6 +179,7 @@ export default class AstroYantra extends Component {
         this.state = {
             itemsFromApi: [],
             isLoaded: false,
+            isError: false,
         }
     }
 
@@ -217,12 +218,17 @@ export default class AstroYantra extends Component {
             this.setState({
                 isLoaded: true,
                 itemsFromApi: json,
-            })
+            });
         })
         .then(result => {
             console.log('Success:', result);
           })
         .catch(error => {
+            this.setState({
+                isLoaded: true,
+                itemsFromApi: {},
+                isError: true,
+            });
             console.error('Error:', error);
           });
     }
@@ -233,6 +239,8 @@ export default class AstroYantra extends Component {
         var { isLoaded, itemsFromApi } = this.state;
         if(!isLoaded) {
             return <div>Loading...</div>
+        } else if(isError){
+            return <div>Error Loading.</div>
         }
         else {
             console.log(itemsFromApi);
