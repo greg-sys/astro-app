@@ -214,7 +214,17 @@ export default class AstroYantra extends Component {
             // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
             // body: "" // body data type must match "Content-Type" header
           })
-        .then(res => res.json())
+        .then(res => {
+            if(res.status !== 200) {
+                let err = new Error(res.statusText)
+                err.response = res
+                throw err
+            }
+            if(res.headers.get("content-type") !== "application/json; charset=utf-8") {
+                throw new TypeError(`Expected JSON, got ${res.headers.get("content-type")}: ${res.text()} `);
+            }
+            return res.json();
+        })
         .then(json => {
             this.setState({
                 isLoaded: true,
