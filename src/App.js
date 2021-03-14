@@ -3,7 +3,7 @@ import './App.css';
 import AstroYantra from './components/astroYantra';
 import MediaQuery from 'react-responsive';
 
-class ReactApp extends Component {
+class App extends Component {
 
   constructor(props) {
     super(props);
@@ -60,4 +60,4 @@ class ReactApp extends Component {
     );
   }
 }
-export default ReactApp;
+export default App;
