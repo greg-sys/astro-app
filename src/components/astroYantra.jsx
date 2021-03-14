@@ -180,6 +180,7 @@ export default class AstroYantra extends Component {
             itemsFromApi: [],
             isLoaded: false,
             isError: false,
+            errorMessage: "",
         }
     }
 
@@ -228,6 +229,7 @@ export default class AstroYantra extends Component {
                 isLoaded: true,
                 itemsFromApi: {},
                 isError: true,
+                errorMessage = error,
             });
             console.error('Error:', error);
           });
@@ -236,11 +238,11 @@ export default class AstroYantra extends Component {
     render() {
         const items = [];
         const signTotals = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; /* total number of planets in each sign */
-        var { isLoaded, itemsFromApi, isError } = this.state;
+        var { isLoaded, itemsFromApi, isError, errorMessage } = this.state;
         if(!isLoaded) {
             return <div>Loading...</div>
         } else if(isError){
-            return <div>Error Loading.</div>
+            return <div>Error Loading. {errorMessage}</div>
         }
         else {
             console.log(itemsFromApi);
